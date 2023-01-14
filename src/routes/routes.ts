@@ -1,9 +1,10 @@
 import { Router } from 'express'
+import { AppError } from 'src/errors/AppError'
 
 const routes = Router()
 
 routes.get('/', (req, res) => {
-  return res.json({ message: 'ok' })
+  res.send('ok')
 })
 
 export { routes }
