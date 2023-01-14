@@ -1,10 +1,12 @@
 import { Router } from 'express'
-import { AppError } from 'src/errors/AppError'
+import { rolesRouter } from '@roles/routes/roles.routes'
 
 const routes = Router()
 
 routes.get('/', (req, res) => {
   res.send('ok')
 })
+
+routes.use('/roles', rolesRouter)
 
 export { routes }
