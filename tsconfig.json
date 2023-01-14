@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "incremental": true,                             
+    "target": "es2017",                      
+    "experimentalDecorators": true,       
+    "emitDecoratorMetadata": true,          
+    "module": "commonjs",   
+    "baseUrl": "./",      
+    "resolveJsonModule": true,                     
+    "allowJs": true,                 
+    "sourceMap": true,      
+    "outDir": "./dist",       
+    "allowSyntheticDefaultImports": true,      
+    "esModuleInterop": true,       
+    "forceConsistentCasingInFileNames": true,    
+    "noImplicitAny": false,                           
+    "strictNullChecks": false,                       
+    "strictPropertyInitialization": false,        
+    "noFallthroughCasesInSwitch": false,           
+    "skipLibCheck": true       
+  },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}
