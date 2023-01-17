@@ -8,5 +8,70 @@
       "name" : "Antonio Thiago",
       "email" : "antoniobackenddeveloper@gmail.com"
     }
+  },
+  "paths": {
+    "/roles": {
+      "post": {
+        "tags": ["Role"],
+        "summary": "Create a role",
+        "description": "Create a new role",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Role created."
+          },
+          "400": {
+            "description": "Role already exists."
+          }
+        }
+      },
+      "get": {
+        "tags": ["Role"],
+        "summary": "List all roles",
+        "description": "Returns all roles paginated.",
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description" : "id Role",
+                      "example" : "00845b74-6af8-4504-8993-2108ea3c7431"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description" : "name Role",
+                      "example" : "Admin"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "description" : "creation date from Role",
+                      "example" : "2023-01-17T22:02:54.555Z"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
